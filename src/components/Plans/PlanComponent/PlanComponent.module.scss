@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.card {
+  overflow: "hidden";
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .image {
+    img {
+      width: -webkit-fill-available;
+      height: 48vh;
+      object-fit: cover;
+      margin: 0 auto;
+      @include breakpoint(md) {
+        width: 28vw;
+      }
+    }
+  }
+  .content {
+    text-align: center;
+    margin: 0 auto;
+    width: 40vw;
+    .name {
+      font-size: 1.4rem;
+      padding: 1rem 0rem;
+      min-height: 6vh;
+
+      @include breakpoint(md) {
+        padding: 2rem 0rem;
+        min-height: 4vh;
+      }
+    }
+    .price {
+      font-size: 1.2rem;
+      padding: 0.8rem 0rem;
+
+      @include breakpoint(md) {
+        padding: 1.5rem 0rem;
+      }
+    }
+    .description {
+      min-height: 8vh;
+      @include breakpoint(md) {
+        min-height: 6vh;
+      }
+    }
+    @include breakpoint(md) {
+      width: 25vw;
+    }
+  }
+}

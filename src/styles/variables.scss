@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Comfortaa:wght@300&family=Gayathri:wght@100&family=Grandiflora+One&family=Italiana&family=Josefin+Slab:wght@200;300;400;500;600&family=Lora&family=Montez&family=Noto+Serif+JP:wght@100;200;300&family=Playfair+Display&family=Quattrocento&family=Sacramento&family=Send+Flowers&family=Stalemate&family=Tenor+Sans&family=Poppins:wght@100&display=swap");
+
+$Lora: "Lora", serif;
+$NotoSerif: "Noto Serif JP", serif;
+$PlayfairDisplay: "Playfair Display", serif;
+$Poppins: "Poppins", sans-serif;
+$Comfortaa: "Comfortaa", sans-serif;
+$Gayathri: "Gayathri", sans-serif;
+$GrandifloraOne: "Grandiflora One", cursive;
+$Italiana: "Italiana", sans-serif;
+$JosefinSlab: "Josefin Slab", serif;
+$Montez: "Montez", cursive;
+$Quattrocento: "Quattrocento", serif;
+$Sacramento: "Sacramento", cursive;
+$SendFlowers: "Send Flowers", cursive;
+$Stalemate: "Stalemate", cursive;
+$TenorSans: "Tenor Sans", sans-serif;
+
+$dark: rgb(29, 29, 29);
+$light: #fff;
+$primary: rgb(162, 162, 246);
+$bg: rgb(244, 244, 255);
+
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$borderRadius: 12px;
+
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: 960px) {
+      @content;
+    }
+  }
+  @if $point == sm {
+    @media (min-width: 630px) {
+      @content;
+    }
+  }
+  @if $point == lg {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+}

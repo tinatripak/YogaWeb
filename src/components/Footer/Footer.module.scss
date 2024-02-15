@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  background-color: rgb(222, 222, 222);
+  padding: 3rem 3rem;
+  display: block;
+
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .logo {
+    .logoName {
+      font-size: 1.8rem;
+    }
+    .creator {
+      font-size: 1.15rem;
+      a {
+        color: black;
+      }
+    }
+  }
+  .status {
+    text-align: left;
+    p {
+      font-size: 1.15rem;
+    }
+    @include breakpoint(md) {
+      text-align: right;
+    }
+  }
+  .listOfNav {
+    text-align: left;
+    @include breakpoint(md) {
+      text-align: right;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        font-size: 1.15rem;
+        cursor: pointer;
+        margin: 1.3rem 0rem;
+        text-decoration: underline;
+        color: rgb(90, 90, 90);
+      }
+    }
+  }
+  .socialMedias {
+    text-align: left;
+    a {
+      color: black;
+    }
+    @include breakpoint(md) {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "YogaIcon.jpeg",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "BackgroundYoga.jpeg",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "me.jpg",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

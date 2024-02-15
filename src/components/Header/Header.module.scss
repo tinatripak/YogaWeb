@@ -1,0 +1,162 @@
+@import "../../styles/variables.scss";
+
+.header {
+  height: $headerHeight;
+  transition: 0.3s ease all;
+  padding: 0 1.5rem;
+
+  position: fixed;
+  width: calc(100% - 3rem);
+  z-index: 2;
+  color: $light;
+
+  &.scrolled {
+    background-color: #eeedeb;
+    color: white;
+
+    @include breakpoint(md) {
+      color: black;
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: 0 3rem;
+    width: calc(100% - 6rem);
+  }
+
+  .content {
+    overflow: hidden;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    font-weight: 200;
+    font-size: 1.5rem;
+
+    .logo {
+      font-size: 2.5rem;
+      text-decoration: none;
+      color: $light;
+      font-family: $JosefinSlab;
+
+      &.scrolled {
+        color: black;
+      }
+    }
+
+    .nav {
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba($dark, 0.9);
+      transform: translate(0);
+      transition: 0.3s ease transform;
+
+      @include breakpoint(md) {
+        transform: none;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        height: 100%;
+        position: static;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $spacing-lg;
+        margin-top: 0;
+
+        @include breakpoint(md) {
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 0;
+          margin-right: calc(0.5rem + #{$spacing-md});
+        }
+        li {
+          &:not(:last-child) {
+            margin-bottom: $spacing-lg;
+            @include breakpoint(md) {
+              margin-bottom: 0;
+              margin-right: $spacing-md;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: inherit;
+            padding: 0.75rem 1.25rem;
+            border-radius: $borderRadius;
+            transition: 0.3s ease all;
+
+            &.activeLink {
+              font-weight: 600;
+            }
+
+            &:hover {
+              background: rgba($light, 0.1);
+            }
+            &:active {
+              border-radius: calc(#{$borderRadius} + 6px);
+              background: linear-gradient(rgba($light, 0.1), rgba($light, 0.2));
+            }
+          }
+        }
+      }
+      button {
+        cursor: pointer;
+        outline: none;
+        padding: 1.5rem 2.5rem;
+        font-size: 1rem;
+        background: #a8a6a1;
+        border: 1px solid transparent;
+        color: $light;
+        transition: 0.3s ease all;
+        font-size: 1.3rem;
+
+        &:hover {
+          border-color: #a8a6a1;
+          background: rgba(#a8a6a1, 0.1);
+          color: $dark;
+        }
+        &:active {
+          border-color: #a8a6a1;
+          background: linear-gradient(rgba(#a8a6a1, 0.2), rgba(#a8a6a1, 0.3));
+          color: $dark;
+        }
+      }
+
+      &.isMenu {
+        transform: translate(100%);
+      }
+    }
+
+    .toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      transition: 0.3s ease all;
+      position: relative;
+
+      &:hover {
+        color: $primary;
+      }
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+  }
+}

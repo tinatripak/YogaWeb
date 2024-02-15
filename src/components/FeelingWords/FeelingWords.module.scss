@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.feelingWords {
+  background-color: #e0ccbe;
+  padding: 4rem 2rem;
+  font-family: $GrandifloraOne;
+  font-weight: 100;
+  text-align: center;
+  p {
+    font-style: italic;
+    font-family: $SendFlowers;
+    font-size: 1.2rem;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+}

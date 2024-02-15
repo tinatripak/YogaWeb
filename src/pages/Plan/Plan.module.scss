@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.plan {
+  padding: 4rem 1.5rem;
+  min-height: calc(100vh - 100px - 8rem);
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    font-family: $NotoSerif;
+    font-weight: 100;
+  }
+}

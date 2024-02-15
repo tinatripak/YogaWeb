@@ -1,0 +1,21 @@
+@import "./styles/variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $JosefinSlab;
+  background: #eeedeb;
+}
+
+button {
+  font-family: $JosefinSlab;
+}
+
+.slick-arrow {
+  width: 15vw;
+  z-index: 2 !important;
+  &::before {
+    font-size: 45px;
+    color: #4f4e4a;
+  }
+}

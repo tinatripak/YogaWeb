@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+.about {
+  padding: 0rem 1.5rem;
+  display: block;
+  align-items: end;
+  margin-bottom: 4vh;
+  height: calc(100vh - 100px - 3rem);
+
+  @include breakpoint(md) {
+    padding: 10rem 3rem 0rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 100px - 5rem);
+  }
+  .textBlock {
+    .aboutInstructor {
+      font-size: 1.5rem;
+      width: 80%;
+
+      @include breakpoint(md) {
+        width: 60%;
+      }
+    }
+    padding-bottom: 5rem;
+    @include breakpoint(md) {
+      padding-top: 0;
+    }
+  }
+  .imageBlock {
+    img {
+      display: flex;
+      width: 90%;
+    }
+  }
+}

@@ -1,10 +1,14 @@
 @import "../../styles/variables.scss";
 .bestYogaWrap {
-  margin: 8rem 3rem;
+  margin: 8rem 3rem 3rem 3rem;
 
-  padding: 1rem 3rem;
+  padding: 0;
   overflow: hidden;
   position: relative;
+
+  @include breakpoint(sm) {
+    padding: 1rem 3rem;
+  }
 
   @include breakpoint(md) {
     padding: 8rem 5rem;
@@ -23,6 +27,7 @@
     position: relative;
 
     display: block;
+    padding: 1rem 1rem;
 
     @include breakpoint(sm) {
       display: grid;
@@ -66,16 +71,23 @@
           font-size: 1.6rem;
         }
       }
-      button {
+      .contact {
         cursor: pointer;
         outline: none;
-        padding: 1.5rem 2.5rem;
-        font-size: 1rem;
-        background: #a8a6a1;
+        // padding: 2px 2px;
+        // font-size: 16px;
+        background: #c8c6c0;
         border: 1px solid transparent;
         color: $light;
         transition: 0.3s ease all;
+        width: max-content;
+        margin: 0 auto;
         font-size: 1.3rem;
+        padding: 1.5rem 2rem;
+        padding-top: 3vh;
+
+        @include breakpoint(md) {
+        }
 
         &:hover {
           border-color: #a8a6a1;

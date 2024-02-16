@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./BestYogaPlan.module.scss";
+import { Link } from "react-scroll";
 
 const BestYogaPlan = () => {
   return (
@@ -20,8 +21,13 @@ const BestYogaPlan = () => {
           <p className={classes.description}>
             Improve your practice at your own pace
           </p>
-          <p className={classes.price}>$15/month</p>
-          <button>Contact me</button>
+          <p className={classes.price}>$15/month</p> <br />
+          {/* <button>Contact me</button> */}
+          <div className={classes.contact}>
+            <Link to="contact" smooth={true} duration={500} spy={true}>
+              Contact me
+            </Link>
+          </div>
         </div>
       </div>
     </div>

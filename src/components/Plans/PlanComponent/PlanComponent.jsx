@@ -42,16 +42,14 @@ const PlanComponent = () => {
 
     return (
       <div key={_id} className={classes.card}>
-        <Link to={`/plan/${_id}`}>
-          <div className={classes.image}>
-            <img src={photo} alt="Unlimited Yoga (videos, materials)" />
-          </div>
-          <div className={classes.content}>
-            <div className={classes.name}>{name}</div>
-            <div className={classes.description}>{description}</div>
-            <div className={classes.price}>{price}</div>
-          </div>
-        </Link>
+        <div className={classes.image}>
+          <img src={photo} alt="Unlimited Yoga (videos, materials)" />
+        </div>
+        <div className={classes.content}>
+          <div className={classes.name}>{name}</div>
+          <div className={classes.description}>{description}</div>
+          <div className={classes.price}>{price}</div>
+        </div>
       </div>
     );
   });

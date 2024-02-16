@@ -114,12 +114,12 @@ const Header = () => {
                 spy={true}
                 activeClass={classes.activeLink}
                 onClick={menuToggleHandler}
+                className={classes.booking}
               >
-                Contacts
+                Book a Class
               </Link>
             </li>
           </ul>
-          <button onClick={ctaClickHandler}>Book a Class</button>
         </nav>
         <div className={classes.toggle}>
           {!menuOpen ? (

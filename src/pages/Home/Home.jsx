@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Home.module.scss";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -10,7 +11,11 @@ const Home = () => {
           Familiarize yourself with our studio and course offering by signing up
           for a complimentary drop-in class now.
         </p>
-        <p className={classes.book}>Book a class</p>
+        <p className={classes.book}>
+          <Link to="contact" smooth={true} duration={500} spy={true}>
+            Book a Class
+          </Link>
+        </p>
       </div>
     </div>
   );

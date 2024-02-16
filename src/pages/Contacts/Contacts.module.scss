@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+
+.contacts {
+  padding-top: 12vh;
+  .title {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+  }
+  .description {
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 4vh;
+    @include breakpoint(sm) {
+      width: 50%;
+    }
+  }
+  .socialMedia {
+    margin: 0 auto;
+    width: min-content;
+    gap: 5vw;
+    margin-top: 10vh;
+    @include breakpoint(md) {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @include breakpoint(md_lg) {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+    }
+
+    .telegram,
+    .whatsapp,
+    .email,
+    .phone {
+      border: 1px solid black;
+      border-radius: 20px;
+      width: 250px;
+      padding: 1rem 1.3rem;
+      margin-bottom: 4vh;
+
+      @include breakpoint(md_lg) {
+        width: 16vw;
+        margin-bottom: 0;
+      }
+      p {
+        text-decoration: underline;
+        &.media {
+          font-size: 1.2rem;
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        width: min-content;
+        padding: 1rem 2rem;
+        background-color: rgb(169, 169, 169);
+        border-radius: 30px;
+        margin: 0 auto;
+        display: flex;
+      }
+    }
+  }
+}

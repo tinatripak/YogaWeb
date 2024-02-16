@@ -9,6 +9,8 @@ import {
 import { IoIosArrowBack } from "react-icons/io";
 import ConditionalRender from "../../ConditionalRender/ConditionalRender";
 import classes from "./VideoDetails.module.scss";
+import Header from "../../Header/Header";
+import { IoArrowBackCircleOutline } from "react-icons/io5";
 
 const VideoDetails = () => {
   const { videoId } = useParams();
@@ -17,16 +19,19 @@ const VideoDetails = () => {
   const [isLoadedDetails, setIsLoadedDetails] = useState(false);
   const [isLoadedInstructor, setIsLoadedInstructor] = useState(false);
   const { name, instructorId, instructorName, duration, level, video } = video_;
+  console.log(video_);
   const dispatch = useDispatch();
 
   const fetchVideoDetail = async (videoId) => {
     const response = await axios
-      .get(`http://localhost:4000/video/getVideoById/${videoId}`)
+      .get(`https://yoga-redux.onrender.com/video/getVideoById/${videoId}`)
       .catch((err) => {
         console.log("Err: ", err);
       });
     const instructorResponse = await axios
-      .get(`http://localhost:4000/instructor/getInstructorById/${instructorId}`)
+      .get(
+        `https://yoga-redux.onrender.com/instructor/getInstructorById/${instructorId}`
+      )
       .catch((err) => {
         console.log("Err: ", err);
       });
@@ -51,45 +56,28 @@ const VideoDetails = () => {
     <ConditionalRender
       conditions={[isLoadedInstructor, isLoadedDetails]}
       content={
-        <>
-          <div className="buttons">
-            <button onClick={() => navigate(-1)}>
-              <IoIosArrowBack size={30} /> Back
-            </button>
-          </div>
-          <div
-            className="ui container"
-            style={{ marginTop: "1vh", paddingTop: "6vh" }}
-          >
-            {Object.keys(video_).length === 0 ? (
-              <div>...Loading</div>
-            ) : (
-              <div className="ui placeholder segment">
-                <div className="ui two column stackable center aligned grid">
-                  <div className="ui vertical divider"></div>
-                  <div className="middle aligned row">
-                    <div className="column lp ">
-                      <iframe
-                        width="100%"
-                        height="300vh"
-                        src={video}
-                        title="YouTube video player"
-                      ></iframe>
-                    </div>
-                    <div className="column rp">
-                      <h1>{name}</h1>
-                      <h2>
-                        <a className="ui teal label">{duration}</a>
-                      </h2>
-                      <h3 className="ui brown block ">Level: {level}</h3>
-                      <p>{instructorName}</p>
-                    </div>
-                  </div>
-                </div>
+        <div className={classes.videoMaterials}>
+          <div className={classes.backAndDetails}>
+            <div className={classes.buttons}>
+              <a href="http://localhost:3000/">
+                <IoArrowBackCircleOutline size={50} />
+              </a>
+            </div>
+            <div className={classes.details}>
+              <div className={classes.video}>
+                <iframe src={video} title="YouTube video player"></iframe>
               </div>
-            )}
+              <div className={classes.descriptionToVideo}>
+                <p className={classes.name}>{name}</p>
+                <p className={classes.duration}>Duration: {duration}</p>
+                <p className={classes.level}>Level: {level}</p>
+                <p className={classes.instructor}>
+                  Instructor: {instructorName}
+                </p>
+              </div>
+            </div>
           </div>
-        </>
+        </div>
       }
     />
   );

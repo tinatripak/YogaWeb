@@ -1,0 +1,50 @@
+@import "../../../styles//variables.scss";
+
+.videoMaterials {
+  a {
+    color: black !important;
+  }
+  .backAndDetails {
+    padding-top: 5vh;
+    .buttons {
+      margin-left: 3rem;
+      button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+      }
+    }
+    .details {
+      .video {
+        margin-bottom: 8vh;
+        iframe {
+          display: flex;
+          margin: 0 auto;
+          width: 70vw;
+          height: 50vh;
+
+          @include breakpoint(md) {
+            width: 50vw;
+            height: 50vh;
+          }
+        }
+      }
+      .descriptionToVideo {
+        text-align: center;
+        .name {
+          font-size: 35px;
+          margin: 0;
+        }
+        .duration {
+          font-size: 18px;
+        }
+        .level {
+          font-size: 18px;
+        }
+        .instructor {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

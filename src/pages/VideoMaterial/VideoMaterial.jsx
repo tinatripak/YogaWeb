@@ -10,10 +10,7 @@ const VideoMaterial = () => {
         access to our library, we've got options to flex with your unique
         practice goals
       </h1>
-      <VideoPage />
-      <div className={classes.moreVideos}>
-        <h3>More videos</h3>
-      </div>
+      <VideoPage lenArray="5" />
     </div>
   );
 };

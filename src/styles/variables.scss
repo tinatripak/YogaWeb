@@ -44,4 +44,14 @@ $headerHeight: 100px;
       @content;
     }
   }
+  @if $point == md_lg {
+    @media (min-width: 1100px) {
+      @content;
+    }
+  }
+  @if $point == xs {
+    @media (max-width: 629) {
+      @content;
+    }
+  }
 }

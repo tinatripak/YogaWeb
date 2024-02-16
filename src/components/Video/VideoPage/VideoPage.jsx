@@ -5,16 +5,15 @@ import { setVideos } from "../../../redux/actions/productsActions";
 import VideoComponent from "../VideoComponent/VideoComponent";
 import ConditionalRender from "../../ConditionalRender/ConditionalRender";
 
-const VideoPage = () => {
+const VideoPage = ({ lenArray }) => {
   useSelector((state) => state.allVideos.videos);
-
   const dispatch = useDispatch();
   const [isLoadedVideo, setIsLoadedVideo] = useState(false);
   const [isLoadedInstructor, setIsLoadedInstructor] = useState(false);
 
   const fetchVideo = async () => {
     const videosResponse = await axios
-      .get("http://localhost:4000/video/getVideos")
+      .get("https://yoga-redux.onrender.com/video/getVideos")
       .catch((err) => {
         console.log("Err: ", err);
       });
@@ -23,7 +22,7 @@ const VideoPage = () => {
       videosResponse?.data?.data.map(async (video) => {
         const instId = video?.instructorId;
         const instructorResponse = await axios.get(
-          `http://localhost:4000/instructor/getInstructorById/${instId}`
+          `https://yoga-redux.onrender.com/instructor/getInstructorById/${instId}`
         );
 
         const instructorData = instructorResponse?.data?.data;
@@ -45,7 +44,7 @@ const VideoPage = () => {
   return (
     <ConditionalRender
       conditions={[isLoadedInstructor, isLoadedVideo]}
-      content={<VideoComponent />}
+      content={<VideoComponent lenArray={lenArray} />}
     />
   );
 };

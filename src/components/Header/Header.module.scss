@@ -103,6 +103,32 @@
             &.activeLink {
               font-weight: 600;
             }
+            &.booking {
+              border-radius: 0;
+              cursor: pointer;
+              outline: none;
+              padding: 1.5rem 2.5rem;
+              font-size: 1rem;
+              background: #a8a6a1;
+              border: 1px solid transparent;
+              color: $light;
+              transition: 0.3s ease all;
+              font-size: 1.3rem;
+
+              &:hover {
+                border-color: #a8a6a1;
+                background: rgba(#a8a6a1, 0.1);
+                color: $dark;
+              }
+              &:active {
+                border-color: #a8a6a1;
+                background: linear-gradient(
+                  rgba(#a8a6a1, 0.2),
+                  rgba(#a8a6a1, 0.3)
+                );
+                color: $dark;
+              }
+            }
 
             &:hover {
               background: rgba($light, 0.1);
@@ -114,29 +140,6 @@
           }
         }
       }
-      button {
-        cursor: pointer;
-        outline: none;
-        padding: 1.5rem 2.5rem;
-        font-size: 1rem;
-        background: #a8a6a1;
-        border: 1px solid transparent;
-        color: $light;
-        transition: 0.3s ease all;
-        font-size: 1.3rem;
-
-        &:hover {
-          border-color: #a8a6a1;
-          background: rgba(#a8a6a1, 0.1);
-          color: $dark;
-        }
-        &:active {
-          border-color: #a8a6a1;
-          background: linear-gradient(rgba(#a8a6a1, 0.2), rgba(#a8a6a1, 0.3));
-          color: $dark;
-        }
-      }
-
       &.isMenu {
         transform: translate(100%);
       }

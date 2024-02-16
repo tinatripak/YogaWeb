@@ -28,7 +28,7 @@ const Contacts = () => {
           <PiWhatsappLogoThin size={40} />
           <p className={classes.media}>WhatsApp</p>
           <p>+380953518578</p>
-          <a href="https://api.whatsapp.com/send?phone=0953518578">Contact</a>
+          <a href="https://api.whatsapp.com/send?phone=380953518578">Contact</a>
         </div>
         <div className={classes.email}>
           <CiMail size={40} />

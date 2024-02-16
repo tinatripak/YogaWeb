@@ -153,9 +153,18 @@
       font-size: 2rem;
       transition: 0.3s ease all;
       position: relative;
+      color: white;
+
+      .close {
+        color: white !important;
+      }
+
+      &.scrolled {
+        color: black;
+      }
 
       &:hover {
-        color: $primary;
+        color: white;
       }
 
       @include breakpoint(md) {

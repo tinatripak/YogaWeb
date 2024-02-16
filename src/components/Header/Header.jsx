@@ -121,11 +121,18 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className={classes.toggle}>
+        <div
+          className={`${classes.toggle} ${
+            scrollPosition > 0 ? classes.scrolled : ""
+          }`}
+        >
           {!menuOpen ? (
             <BiMenuAltRight onClick={menuToggleHandler} />
           ) : (
-            <AiOutlineClose onClick={menuToggleHandler} />
+            <AiOutlineClose
+              onClick={menuToggleHandler}
+              className={classes.close}
+            />
           )}
         </div>
       </div>

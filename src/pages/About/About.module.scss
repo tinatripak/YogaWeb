@@ -1,14 +1,11 @@
 @import "../../styles/variables.scss";
 
 .about {
-  padding: 6rem 1.5rem 0rem 1.5rem;
   display: block;
   align-items: end;
   margin-bottom: 4vh;
-  height: calc(100vh - 100px - 3rem);
-  @include breakpoint(sm) {
-    padding: 0rem 1.5rem;
-  }
+  height: auto;
+  padding: 3rem 1.5rem;
 
   @include breakpoint(md) {
     padding: 10rem 3rem 0rem 3rem;

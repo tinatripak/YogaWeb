@@ -6,10 +6,13 @@ const Home = () => {
   return (
     <div id="home" className={classes.home}>
       <div className={classes.text}>
-        <h3>Taking care of your mind, body and soul.</h3>
+        <p className={classes.title}>
+          Nurture your mind, body, and soul through activities that promote
+          growth, health, and inner peace.
+        </p>
         <p className={classes.about}>
-          Familiarize yourself with our studio and course offering by signing up
-          for a complimentary drop-in class now.
+          Familiarize yourself with our paid courses and tons of free videos and
+          find harmony between your body and mind.
         </p>
         <p className={classes.book}>
           <Link to="contact" smooth={true} duration={500} spy={true}>

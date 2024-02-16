@@ -59,7 +59,7 @@ const VideoDetails = () => {
         <div className={classes.videoMaterials}>
           <div className={classes.backAndDetails}>
             <div className={classes.buttons}>
-              <a href="https://yoga-redux.onrender.com/">
+              <a href="https://yoga-namaste.vercel.app/">
                 <IoArrowBackCircleOutline size={50} />
               </a>
             </div>

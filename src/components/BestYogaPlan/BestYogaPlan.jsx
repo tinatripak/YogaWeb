@@ -21,8 +21,7 @@ const BestYogaPlan = () => {
           <p className={classes.description}>
             Improve your practice at your own pace
           </p>
-          <p className={classes.price}>$15/month</p> <br />
-          {/* <button>Contact me</button> */}
+          <p className={classes.price}>$20/month</p> <br />
           <div className={classes.contact}>
             <Link to="contact" smooth={true} duration={500} spy={true}>
               Contact me

@@ -59,7 +59,7 @@ const VideoDetails = () => {
         <div className={classes.videoMaterials}>
           <div className={classes.backAndDetails}>
             <div className={classes.buttons}>
-              <a href="http://localhost:3000/">
+              <a href="https://yoga-redux.onrender.com/">
                 <IoArrowBackCircleOutline size={50} />
               </a>
             </div>

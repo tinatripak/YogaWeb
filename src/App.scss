@@ -5,6 +5,11 @@ body {
   padding: 0;
   font-family: $JosefinSlab;
   background: #eeedeb;
+}
+
+html,
+body {
+  max-width: 100%;
   overflow-x: hidden;
 }
 
